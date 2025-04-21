@@ -15,5 +15,5 @@ module quadra
         output y_t  y
 );
     // <challenge>   
-    always_comb y = a * (25'sd1 << 23) + b * ({{8'b0, x2}, x2} << 7) + c * sq[(X_W*2)-1: (X_W*2)-Y_W-1];
+    always_comb y = a + b*({8'b0, x2} << 7) + c * sq[(X_W*2)-1: (X_W*2)-Y_W-1];
 endmodule
